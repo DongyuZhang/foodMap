@@ -7,6 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class FoodMapApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FoodMapApplication.class, args);
+	    final SpringApplication application = new SpringApplication(FoodMapApplication.class);
+	    application.setAddCommandLineProperties(false);
+		application.run(args);
 	}
 }
